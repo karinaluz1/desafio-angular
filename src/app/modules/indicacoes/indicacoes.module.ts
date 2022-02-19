@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { IndicacoesRoutingModule } from './indicacoes-routing.module';
 import { IndicacoesComponent } from './pages/indicacoes/indicacoes.component';
+import { CardComponent } from './components/card/card.component';
 
 
 @NgModule({
   declarations: [
-    IndicacoesComponent
+    IndicacoesComponent,
+    CardComponent
   ],
   imports: [
     CommonModule,

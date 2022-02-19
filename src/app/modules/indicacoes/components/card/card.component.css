@@ -1,0 +1,24 @@
+.card {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  color: #009e9a;
+  width: 30rem;
+  padding: 2rem 0.7rem;
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  border-radius: 0.8rem;
+}
+
+.card:hover {
+  background-color: #009e9a;
+  color: white;
+}
+
+.card-number {
+  font-weight: 700;
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-text {
+  text-transform: uppercase;
+}
