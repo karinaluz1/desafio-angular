@@ -1,0 +1,44 @@
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.row-item {
+  width: 48%;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  padding: 2.5rem 2rem;
+}
+
+header {
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 0.1rem solid #d6d6d6;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+}
+
+header:first-child > h4, header i {
+  color: #009e9a;
+}
+
+p {
+  font-weight: 700;
+}
+
+.item-body {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.item-campo {
+  width: 45%;
+}
+
+.item-campo:first-child {
+  width: 100%;
+}

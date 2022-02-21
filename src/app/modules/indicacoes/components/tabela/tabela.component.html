@@ -1,0 +1,28 @@
+<table>
+  <caption>
+    <h2>
+      Indicações
+    </h2>
+  </caption>
+  <thead>
+    <tr>
+      <th><input type="checkbox"></th>
+      <th>Nome</th>
+      <th>Corretor/corretora</th>
+      <th>Status</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of rows">
+      <td><input type="checkbox"></td>
+      <td>{{row?.nome}}</td>
+      <td>{{row?.corretor}}</td>
+      <td>{{row?.status}}</td>
+      <td>
+        <button [routerLink]="['detalhes', row.id]" class="table-btn blue"><i class="fa-solid fa-address-card"></i></button>
+        <button (click)="deleteSingle(row.id)" class="table-btn red"><i class="fa-solid fa-trash-can"></i></button>
+      </td>
+    </tr>
+  </tbody>
+</table>

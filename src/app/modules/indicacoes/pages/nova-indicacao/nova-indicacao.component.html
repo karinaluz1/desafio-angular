@@ -1,0 +1,33 @@
+<section class="form">
+  <h4>Dados do Cliente</h4>
+  <form name="cadastroForm">
+    <div class="field-group">
+      <label for="nome">Nome Completo</label>
+      <input [(ngModel)]="nova.nome" name="nome" type="text" id="nome" placeholder="Digite aqui o nome completo do cliente">
+    </div>
+    <div class="field-group">
+      <label for="telefone">Telefone</label>
+      <input [(ngModel)]="nova.telefone" name="telefone" type="text" id="telefone" placeholder="DDD + Telefone">
+      </div>
+      <div class="field-group">
+        <label for="empresa">Empresa - opcional</label>
+        <input [(ngModel)]="nova.empresa" name="empresa" type="text" id="empresa" placeholder="Digite aqui o nome da empresa">
+      </div>
+      <div class="field-group">
+        <label for="email">Email</label>
+        <input [(ngModel)]="nova.email" name="email" type="text" id="email" placeholder="Insira aqui o email do cliente">
+      </div>
+      <div class="field-group">
+        <label for="corretor">Corretor</label>
+        <input [(ngModel)]="nova.corretor" name="corretor" type="text" id="corretor" placeholder="Digite aqui o nome do corretor">
+      </div>
+  </form>
+  <section class="button-group">
+    <button [routerLink]="['']" class="button button-cancel">
+      Cancelar
+    </button>
+    <button (click)="cadastrar(nova)" class="button button-primary">
+      Salvar e continuar
+    </button>
+  </section>
+</section>

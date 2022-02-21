@@ -1,3 +1,11 @@
-<app-card [num]="254" text="indicações sem qualquer coisa"></app-card>
-<app-card [num]="452" text="indicações sem qualquer coisa"></app-card>
-<app-card [num]="365" text="indicações sem qualquer coisa"></app-card>
+<section class="cards">
+  <app-card [num]="254" text="indicações sem corretor"></app-card>
+  <app-card [num]="452" text="Propostas fechadas"></app-card>
+  <app-card [num]="365" text="Em andamento"></app-card>
+  <app-card [num]="365" text="Em negociação"></app-card>
+</section>
+<section class="table">
+  <app-tabela [rows]="indicacoes">
+
+  </app-tabela>
+</section>

@@ -1,9 +1,12 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { IndicacoesService } from './core/services/indicacoes.service';
 
 @NgModule({
   declarations: [
@@ -12,9 +15,11 @@ import { CoreModule } from './core/core.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CoreModule
+    CoreModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [IndicacoesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
