@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IndicacoesService } from 'src/app/core/services/indicacoes.service';
+import { Route, Router } from '@angular/router';
+import { IndicacoesService } from 'src/app/shared/services/indicacoes.service';
 
 @Component({
   selector: 'app-indicacoes',
@@ -8,13 +9,13 @@ import { IndicacoesService } from 'src/app/core/services/indicacoes.service';
 })
 export class IndicacoesComponent implements OnInit {
 
-  constructor(private indicacoesService: IndicacoesService) { }
+  constructor(private indicacoesService: IndicacoesService, private router: Router) { }
 
   ngOnInit(): void {
     this.getAll();
   }
 
-  indicacoes!: any[];
+  indicacoes: any[] = [];
   getAll() {
     this.indicacoesService.getIndicacoes().subscribe(
       (res) => {
@@ -25,5 +26,8 @@ export class IndicacoesComponent implements OnInit {
         alert(error);
       }
     )
+  }
+  go() {
+    this.router.navigate(['/indicacoes/cadastrar'])
   }
 }

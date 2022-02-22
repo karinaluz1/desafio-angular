@@ -8,8 +8,13 @@
 .nav {
   background-color: #009e9a;
   flex-grow: 1;
+  min-width: 20rem;
+  height: 100%;
 }
 
 main {
   flex-grow: 6;
+  flex-shrink: 0;
+  padding: 40px;
+  overflow: scroll;
 }

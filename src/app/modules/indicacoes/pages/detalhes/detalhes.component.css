@@ -1,6 +1,7 @@
 .row {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2rem;
 }
 
 .row-item {
@@ -41,4 +42,22 @@ p {
 
 .item-campo:first-child {
   width: 100%;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+.button-text {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: transparent;
+  color: #40cfcb;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 2rem;
 }

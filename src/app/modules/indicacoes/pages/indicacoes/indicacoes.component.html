@@ -1,11 +1,16 @@
+<section class="navigation">
+  <app-button text="adicionar indicações" classs="button-primary" (clickFunction)="go()">
+
+  </app-button>
+</section>
 <section class="cards">
   <app-card [num]="254" text="indicações sem corretor"></app-card>
   <app-card [num]="452" text="Propostas fechadas"></app-card>
-  <app-card [num]="365" text="Em andamento"></app-card>
+  <app-card [num]="null || indicacoes!.length" text="Em andamento"></app-card>
   <app-card [num]="365" text="Em negociação"></app-card>
 </section>
 <section class="table">
-  <app-tabela [rows]="indicacoes">
+  <app-tabela (deleted)="getAll()" [rows]="indicacoes">
 
   </app-tabela>
 </section>

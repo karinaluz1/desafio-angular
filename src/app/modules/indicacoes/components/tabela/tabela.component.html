@@ -1,28 +1,47 @@
 <table>
   <caption>
-    <h2>
-      Indicações
-    </h2>
+    <h2>Indicações</h2>
   </caption>
   <thead>
     <tr>
-      <th><input type="checkbox"></th>
+      <th><input type="checkbox" /></th>
       <th>Nome</th>
       <th>Corretor/corretora</th>
       <th>Status</th>
-      <th>&nbsp;</th>
+      <th> </th>
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let row of rows">
-      <td><input type="checkbox"></td>
-      <td>{{row?.nome}}</td>
-      <td>{{row?.corretor}}</td>
-      <td>{{row?.status}}</td>
+    <tr *ngFor="let row of rows | slice: start:end; let i = index">
+      <td><input type="checkbox" /></td>
+      <td>{{ row?.nome }}</td>
+      <td>{{ row?.corretor }}</td>
+      <td>{{ row?.status }}</td>
       <td>
-        <button [routerLink]="['detalhes', row.id]" class="table-btn blue"><i class="fa-solid fa-address-card"></i></button>
-        <button (click)="deleteSingle(row.id)" class="table-btn red"><i class="fa-solid fa-trash-can"></i></button>
+        <button [routerLink]="['detalhes', row.id]" class="table-btn blue">
+          <i class="fa-solid fa-address-card"></i>
+        </button>
+        <button (click)="deleteSingle(row.id)" class="table-btn red">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
       </td>
     </tr>
   </tbody>
 </table>
+<section class="pagination">
+  <button
+    [disabled]="start == 0"
+    (click)="start = start - increment; end = start + increment"
+  >
+    <i class="fas fa-angle-left"></i>
+  </button>
+
+
+
+  <button
+    [disabled]="start + increment + 1 > getTotal()"
+    (click)="start = start + increment; end = start + increment"
+  >
+    <i class="fas fa-angle-right"></i>
+  </button>
+</section>

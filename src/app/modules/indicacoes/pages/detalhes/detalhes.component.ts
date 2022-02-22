@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { IndicacoesService } from 'src/app/core/services/indicacoes.service';
+import { IndicacoesService } from 'src/app/shared/services/indicacoes.service';
 
 @Component({
   selector: 'app-detalhes',

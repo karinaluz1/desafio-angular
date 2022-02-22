@@ -31,12 +31,13 @@ td {
   padding: 20px 2px;
 }
 
-th:first-child, td:first-child {
+th:first-child,
+td:first-child {
   text-align: center;
 }
 
 button.table-btn {
-  background-color: none;
+  background-color: transparent;
   width: 3rem;
   height: 3rem;
   line-height: 3rem;
@@ -60,4 +61,28 @@ td:last-child {
   justify-content: flex-end;
   align-items: center;
   gap: 10px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.pagination button {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 3rem;
+  border: none;
+  background-color: #009e9a;
+  color: white;
+  cursor: pointer;
+}
+
+.pagination button[disabled] {
+  opacity: 0.9;
+  background-color: #ccc;
+  color: #666;
 }

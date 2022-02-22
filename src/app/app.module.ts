@@ -1,12 +1,10 @@
-import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
-import { IndicacoesService } from './core/services/indicacoes.service';
+import { IndicacoesService } from './shared/services/indicacoes.service';
 
 @NgModule({
   declarations: [
@@ -15,9 +13,7 @@ import { IndicacoesService } from './core/services/indicacoes.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CoreModule,
-    HttpClientModule,
-    FormsModule
+    CoreModule
   ],
   providers: [IndicacoesService],
   bootstrap: [AppComponent]
